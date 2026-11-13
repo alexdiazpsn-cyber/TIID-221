@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://cdn.jsdelivr.net/npm/daisyui@5" rel="stylesheet" type="text/css" />
+    <title>Login</title>
+</head>
+<body>
+    <div>
+        <h1>Iniciar Sesión</h1>
+        <form action="" method="post">
+            <label> correo:</label>
+            <input type="email" name="correo" required>
+            <label> contraseña:</label>
+            <input type="password" name="password_hash" readonly>
+            <button type="submit" class="btn btn-primary">Entrar</button>
+        </form>
+        <p> No tienes cuenta?</p>
+        <a href="{{ url_for('registro') }}"></a>
+    </div>
+</body>
+<script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+</html>
