@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <div>
+        <h1>Catalogo de películas</h1>
+        {% with mesajes = get_flashed_messages() %}
+            {% if mesajes %}
+              <h3> {{ msj}} </h3>
+              {% endfor %}
+            {% endif %}
+        {% endwith %}
+
+        <!-- Formulario -->
+         <form action="/guardar" method="POST">
+            <input type="text" name="txtTitulo" placeholder="Escribe el título de la película">
+            <input type="text" name="txtAutor" placeholder="Escribe el nombre del autor">
+            <input type="text" name="txtAnio" placeholder="Escribe el año de lanzamiento">
+            <input type="text" name="txtCalificación" placeholder="Escribe la calificación de la película">
+            <input type="text" name="txtReseña" placeholder="Escribe la reseña de la película">
+            <button type="submit">Agregar película</button> 
+         </form>
+
+        <!-- Tabla -->
+        <table>
+            <tr>
+                <th>ID</th>
+                <th>Título</th>
+                <th>Autor</th>
+                <th>Año</th>
+                <th>Calificación</th>
+                <th>Reseña</th>
+            </tr>
+        </table>
+    </div>
+</body>
+</html>
